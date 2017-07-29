@@ -1,14 +1,28 @@
 <html>
 	<head>
 		<style>
+			body {
+				text-align: center;
+				font-size: 11px;
+				padding: 10px 10px;
+				
+			}
+			input, textarea {
+				display: block;
+				border: solid 1px;
+				margin: 10px auto;
+			}
 		</style>
 	</head>
 	<body>
-		<p>Hello World</p>
+		<h1>Caesar Cipher Encryptor</h1>
 		<form>
-			<input name='words' type='text' />
+			<label for='words'>Enter your Secret Message</label>
+			<textarea name='words' cols='50' rows='10'></textarea>
+			<label for='cipher_number'>Alphabet Shift</label>
+			<input name='cipher_number' type='number' min='1'/>
 			<input value='Encrypt' type='submit' />
 		</form>
-		<p><%= original_text %></p>
+		<p><%= encrypted_text %></p>
 	</body>
 </html>
