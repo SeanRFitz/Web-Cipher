@@ -4,14 +4,38 @@
 			body {
 				font-family: Arial;
 				text-align: center;
+				margin: auto;
 				font-size: 16px;
 				padding: 10px 10px;
-				
 			}
 			input, textarea {
 				display: block;
 				border: solid 1px;
+				border-radius: 5px;
 				margin: 10px auto;
+			}
+			textarea {
+				margin-bottom: 20px;
+			}
+			input[name='cipher_number'] {
+				width: 50px;
+			}
+			label {
+				font-style: italic;
+			}
+			input[type='submit'] {
+				background-color: rgba(100,100,100,.7);
+				border: solid 1px;
+				color: white;
+				width: 10%;
+				height: 30px;
+				font-size: 16px;
+				margin: 20px auto;
+			}
+			.output-text {
+				display: block;
+				width: 33%;
+				margin: 20px auto;
 			}
 		</style>
 	</head>
@@ -24,6 +48,8 @@
 			<input name='cipher_number' type='number' min='1'/>
 			<input value='Encrypt' type='submit' />
 		</form>
-		<p><%= encrypted_text %></p>
+		<div class='output-text'>
+			<p><%= encrypted_text %></p>
+		</div>
 	</body>
 </html>
