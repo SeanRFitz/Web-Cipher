@@ -26,7 +26,7 @@ def caesar_cipher(str, num)
 end
 
 get '/' do
-	original_text = params["words"]
+	original_text = params["words"] ||= ""
 	cipher_number = params["cipher_number"].to_i
 	encrypted_text = caesar_cipher(original_text,cipher_number)
 	erb :index, :locals => {:original_text => original_text,
